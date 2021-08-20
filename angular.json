@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "projects": {
+    "child-poc": {
+      "projectType": "application",
+      "root": "apps/child-poc",
+      "sourceRoot": "apps/child-poc/src",
+      "prefix": "cricuti18n-child-poc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/child-poc",
+            "index": "apps/child-poc/src/index.html",
+            "main": "apps/child-poc/src/main.ts",
+            "polyfills": "apps/child-poc/src/polyfills.ts",
+            "tsConfig": "apps/child-poc/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/child-poc/src/favicon.ico",
+              "apps/child-poc/src/assets"
+            ],
+            "styles": ["apps/child-poc/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/child-poc/src/environments/environment.ts",
+                  "with": "apps/child-poc/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "child-poc:build:production"
+            },
+            "development": {
+              "browserTarget": "child-poc:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "child-poc:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/child-poc/src/**/*.ts",
+              "apps/child-poc/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/child-poc"],
+          "options": {
+            "jestConfig": "apps/child-poc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "child-poc-e2e": {
+      "root": "apps/child-poc-e2e",
+      "sourceRoot": "apps/child-poc-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/child-poc-e2e/cypress.json",
+            "tsConfig": "apps/child-poc-e2e/tsconfig.e2e.json",
+            "devServerTarget": "child-poc:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "child-poc:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/child-poc-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "child-poc"
+}
