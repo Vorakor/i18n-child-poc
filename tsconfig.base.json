@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cricuti18n-child-poc/car-details-poc": [
+        "libs/car-details-poc/src/index.ts"
+      ],
+      "@cricuti18n-child-poc/car-details-poc-test2": [
+        "libs/car-details-poc-test2/src/index.ts"
+      ],
+      "@cricuti18n-child-poc/car-section-poc": [
+        "libs/car-section-poc/src/index.ts"
+      ],
+      "@cricuti18n-child-poc/car-section-poc-test2": [
+        "libs/car-section-poc-test2/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -119,6 +119,154 @@
           }
         }
       }
+    },
+    "car-details-poc": {
+      "projectType": "library",
+      "root": "libs/car-details-poc",
+      "sourceRoot": "libs/car-details-poc/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/car-details-poc/tsconfig.lib.json",
+            "project": "libs/car-details-poc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/car-details-poc/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/car-details-poc/src/**/*.ts",
+              "libs/car-details-poc/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/car-details-poc"],
+          "options": {
+            "jestConfig": "libs/car-details-poc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "car-details-poc-test2": {
+      "projectType": "library",
+      "root": "libs/car-details-poc-test2",
+      "sourceRoot": "libs/car-details-poc-test2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/car-details-poc-test2/tsconfig.lib.json",
+            "project": "libs/car-details-poc-test2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/car-details-poc-test2/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/car-details-poc-test2/src/**/*.ts",
+              "libs/car-details-poc-test2/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/car-details-poc-test2"],
+          "options": {
+            "jestConfig": "libs/car-details-poc-test2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "car-section-poc": {
+      "projectType": "library",
+      "root": "libs/car-section-poc",
+      "sourceRoot": "libs/car-section-poc/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/car-section-poc/tsconfig.lib.json",
+            "project": "libs/car-section-poc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/car-section-poc/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/car-section-poc/src/**/*.ts",
+              "libs/car-section-poc/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/car-section-poc"],
+          "options": {
+            "jestConfig": "libs/car-section-poc/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "car-section-poc-test2": {
+      "projectType": "library",
+      "root": "libs/car-section-poc-test2",
+      "sourceRoot": "libs/car-section-poc-test2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/car-section-poc-test2/tsconfig.lib.json",
+            "project": "libs/car-section-poc-test2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/car-section-poc-test2/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/car-section-poc-test2/src/**/*.ts",
+              "libs/car-section-poc-test2/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/car-section-poc-test2"],
+          "options": {
+            "jestConfig": "libs/car-section-poc-test2/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
