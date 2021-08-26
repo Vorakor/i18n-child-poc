@@ -113,6 +113,142 @@
                     }
                 }
             }
+        },
+        "vehicles": {
+            "projectType": "library",
+            "root": "libs/vehicles",
+            "sourceRoot": "libs/vehicles/src",
+            "prefix": "vehicles",
+            "architect": {
+                "build": {
+                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "options": {
+                        "tsConfig": "libs/vehicles/tsconfig.lib.json",
+                        "project": "libs/vehicles/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "libs/vehicles/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/vehicles/src/**/*.ts", "libs/vehicles/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/vehicles"],
+                    "options": {
+                        "jestConfig": "libs/vehicles/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "inventory": {
+            "projectType": "library",
+            "root": "libs/inventory",
+            "sourceRoot": "libs/inventory/src",
+            "prefix": "inventory",
+            "architect": {
+                "build": {
+                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "options": {
+                        "tsConfig": "libs/inventory/tsconfig.lib.json",
+                        "project": "libs/inventory/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "libs/inventory/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/inventory/src/**/*.ts", "libs/inventory/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/inventory"],
+                    "options": {
+                        "jestConfig": "libs/inventory/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "vehicle-details": {
+            "projectType": "library",
+            "root": "libs/vehicle-details",
+            "sourceRoot": "libs/vehicle-details/src",
+            "prefix": "details",
+            "architect": {
+                "build": {
+                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "options": {
+                        "tsConfig": "libs/vehicle-details/tsconfig.lib.json",
+                        "project": "libs/vehicle-details/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "libs/vehicle-details/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/vehicle-details/src/**/*.ts", "libs/vehicle-details/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/vehicle-details"],
+                    "options": {
+                        "jestConfig": "libs/vehicle-details/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
+        },
+        "vehicle-modal": {
+            "projectType": "library",
+            "root": "libs/vehicle-modal",
+            "sourceRoot": "libs/vehicle-modal/src",
+            "prefix": "modal",
+            "architect": {
+                "build": {
+                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "options": {
+                        "tsConfig": "libs/vehicle-modal/tsconfig.lib.json",
+                        "project": "libs/vehicle-modal/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "libs/vehicle-modal/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@nrwl/linter:eslint",
+                    "options": {
+                        "lintFilePatterns": ["libs/vehicle-modal/src/**/*.ts", "libs/vehicle-modal/src/**/*.html"]
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/vehicle-modal"],
+                    "options": {
+                        "jestConfig": "libs/vehicle-modal/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
         }
     },
     "cli": {
