@@ -16,13 +16,19 @@
                         "main": "apps/child-poc/src/main.ts",
                         "polyfills": "apps/child-poc/src/polyfills.ts",
                         "tsConfig": "apps/child-poc/tsconfig.app.json",
-                        "inlineStyleLanguage": "scss",
+                        "aot": true,
                         "assets": ["apps/child-poc/src/favicon.ico", "apps/child-poc/src/assets"],
                         "styles": ["apps/child-poc/src/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
                         "production": {
+                            "optimization": true,
+                            "sourceMap": false,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
                             "budgets": [
                                 {
                                     "type": "initial",
@@ -42,20 +48,15 @@
                                 }
                             ],
                             "outputHashing": "all"
-                        },
-                        "development": {
-                            "buildOptimizer": false,
-                            "optimization": false,
-                            "vendorChunk": true,
-                            "extractLicenses": false,
-                            "sourceMap": true,
-                            "namedChunks": true
                         }
                     },
                     "defaultConfiguration": "production"
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "child-poc:build"
+                    },
                     "configurations": {
                         "production": {
                             "browserTarget": "child-poc:build:production"
