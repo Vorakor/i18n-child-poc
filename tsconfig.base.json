@@ -1,33 +1,20 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@cricuti18n-child-poc/car-details-poc": [
-        "libs/car-details-poc/src/index.ts"
-      ],
-      "@cricuti18n-child-poc/car-details-poc-test2": [
-        "libs/car-details-poc-test2/src/index.ts"
-      ],
-      "@cricuti18n-child-poc/car-section-poc": [
-        "libs/car-section-poc/src/index.ts"
-      ],
-      "@cricuti18n-child-poc/car-section-poc-test2": [
-        "libs/car-section-poc-test2/src/index.ts"
-      ]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {}
+    },
+    "exclude": ["node_modules", "tmp"]
 }
