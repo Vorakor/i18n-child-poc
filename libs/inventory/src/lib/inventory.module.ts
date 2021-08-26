@@ -4,17 +4,8 @@ import { RouterModule } from '@angular/router';
 import { InventoryComponent } from './components/inventory/inventory.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild([
-            /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-        ])
-    ],
-    declarations: [
-      InventoryComponent
-    ],
-    exports: [
-      InventoryComponent
-    ]
+    imports: [CommonModule, RouterModule.forChild([{ path: '', pathMatch: 'full', component: InventoryComponent }])],
+    declarations: [InventoryComponent],
+    exports: [InventoryComponent]
 })
 export class InventoryModule {}

@@ -4,17 +4,8 @@ import { RouterModule } from '@angular/router';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild([
-            /* {path: '', pathMatch: 'full', component: InsertYourComponentHere} */
-        ])
-    ],
-    declarations: [
-      VehiclesComponent
-    ],
-    exports: [
-      VehiclesComponent
-    ]
+    imports: [CommonModule, RouterModule.forChild([{ path: 'vehicles', pathMatch: 'full', component: VehiclesComponent }])],
+    declarations: [VehiclesComponent],
+    exports: [VehiclesComponent]
 })
 export class VehiclesModule {}
