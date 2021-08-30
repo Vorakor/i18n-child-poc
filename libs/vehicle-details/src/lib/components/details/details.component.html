@@ -1,1 +1,3 @@
-<p>details works!</p>
+<div *ngFor="let prop of vehicle$ | async | keyvalue">
+    <div>{{ prop.key }}: {{ prop.value }}</div>
+</div>

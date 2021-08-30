@@ -12,6 +12,7 @@
         "vehicles": { "tags": [] },
         "inventory": { "tags": [] },
         "vehicle-details": { "tags": [] },
-        "vehicle-modal": { "tags": [] }
+        "vehicle-modal": { "tags": [] },
+        "shared": { "tags": [] }
     }
 }

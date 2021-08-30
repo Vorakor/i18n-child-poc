@@ -1,0 +1,46 @@
+{
+    "purchases": [
+        {
+            "vehicle": {
+                "vehicleId": 12,
+                "make": "Acura",
+                "model": "RLX",
+                "year": "2018",
+                "configuration": "Sedan 4D",
+                "engineType": "automatic",
+                "wheelSize": "235/70R16 104T",
+                "awd": true,
+                "fuelType": "gasoline",
+                "mileage": "15ci/20h/17co",
+                "odometer": "51187"
+            },
+            "purchaseInfo": {
+                "condition": "Excellent",
+                "MSRP": {
+                    "new": 55000,
+                    "excellent": 32000,
+                    "veryGood": 28000,
+                    "used": 25000,
+                    "poor": 15000,
+                    "notRunning": 5000
+                },
+                "cashDiscount": 10,
+                "purchasePrice": 25000,
+                "vehicle": {
+                    "vehicleId": 12,
+                    "make": "Acura",
+                    "model": "RLX",
+                    "year": "2018",
+                    "configuration": "Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "51187"
+                }
+            },
+            "condition": "Excellent"
+        }
+    ]
+}

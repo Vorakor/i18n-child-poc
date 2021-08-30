@@ -1,4 +1,4 @@
-import { IDetails, ICondition } from '@child-poc/vehicle-details';
+import { IDetails, ICondition } from '../models';
 
 export interface ITradeIn {
     vehicle: IDetails;

@@ -1,8 +1,11 @@
+import { IDetails } from '../models';
+
 export interface IPurchaseInformation {
     condition: ICondition;
     MSRP: IPriceByCondition;
     cashDiscount: number; // percentage
     purchasePrice?: number;
+    vehicle: IDetails;
 }
 
 export enum ICondition {

@@ -1,4 +1,5 @@
 export interface IDetails {
+    vehicleId: number;
     make: string;
     model: string;
     year: string;

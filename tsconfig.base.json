@@ -14,11 +14,13 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
+        "resolveJsonModule": true,
         "paths": {
             "@child-poc/vehicles": ["libs/vehicles/src/index.ts"],
             "@child-poc/inventory": ["libs/inventory/src/index.ts"],
             "@child-poc/vehicle-details": ["libs/vehicle-details/src/index.ts"],
-            "@child-poc/vehicle-modal": ["libs/vehicle-modal/src/index.ts"]
+            "@child-poc/vehicle-modal": ["libs/vehicle-modal/src/index.ts"],
+            "@child-poc/shared": ["libs/shared/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

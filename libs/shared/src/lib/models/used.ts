@@ -1,6 +1,4 @@
-import { ICondition, IDetails, IPurchaseInformation } from '@child-poc/vehicle-details';
-import { ISales } from './sales';
-import { ITradeIn } from './tradeIn';
+import { ICondition, IDetails, IPurchaseInformation, ISales, ITradeIn } from '../models';
 
 export interface IUsed {
     vehicles: IDetails[];

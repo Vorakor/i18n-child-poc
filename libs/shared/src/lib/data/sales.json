@@ -1,0 +1,127 @@
+{
+    "sales": [
+        {
+            "vehicle": {
+                "vehicleId": 7,
+                "make": "Honda",
+                "model": "Pilot",
+                "year": "2007",
+                "configuration": "4WD 3.5L FI SOHC 212 CID",
+                "engineType": "automatic",
+                "wheelSize": "235/70R16 104T",
+                "awd": true,
+                "fuelType": "gasoline",
+                "mileage": "15ci/20h/17co",
+                "odometer": "159040"
+            },
+            "purchaseInfo": {
+                "condition": "veryGood",
+                "MSRP": {
+                    "new": 55000,
+                    "excellent": 32000,
+                    "veryGood": 28000,
+                    "used": 25000,
+                    "poor": 15000,
+                    "notRunning": 5000
+                },
+                "cashDiscount": 10,
+                "purchasePrice": 15000,
+                "vehicle": {
+                    "vehicleId": 7,
+                    "make": "Honda",
+                    "model": "Pilot",
+                    "year": "2007",
+                    "configuration": "4WD 3.5L FI SOHC 212 CID",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "159040"
+                }
+            }
+        },
+        {
+            "vehicle": {
+                "vehicleId": 3,
+                "make": "Volkswagen",
+                "model": "Tiguan",
+                "year": "2021",
+                "configuration": "SE",
+                "engineType": "automatic",
+                "wheelSize": "245/40R18 97Y",
+                "awd": false,
+                "fuelType": "gasoline",
+                "mileage": "21ci/30h/24co",
+                "odometer": "0"
+            },
+            "purchaseInfo": {
+                "condition": "Excellent",
+                "MSRP": {
+                    "new": 50000,
+                    "excellent": 32000,
+                    "veryGood": 25000,
+                    "used": 20000,
+                    "poor": 15000,
+                    "notRunning": 1000
+                },
+                "cashDiscount": 10,
+                "purchasePrice": 50000,
+                "vehicle": {
+                    "vehicleId": 3,
+                    "make": "Volkswagen",
+                    "model": "Tiguan",
+                    "year": "2021",
+                    "configuration": "SE",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": false,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "0"
+                }
+            }
+        },
+        {
+            "vehicle": {
+                "vehicleId": 6,
+                "make": "Audi",
+                "model": "R8",
+                "year": "2021",
+                "configuration": "Coupe V10 Premium",
+                "engineType": "automatic",
+                "wheelSize": "245/40R18 97Y",
+                "awd": false,
+                "fuelType": "gasoline",
+                "mileage": "21ci/30h/24co",
+                "odometer": "1276"
+            },
+            "purchaseInfo": {
+                "condition": "Excellent",
+                "MSRP": {
+                    "new": 140000,
+                    "excellent": 120000,
+                    "veryGood": 85000,
+                    "used": 70000,
+                    "poor": 60000,
+                    "notRunning": 15000
+                },
+                "cashDiscount": 10,
+                "purchasePrice": 132000,
+                "vehicle": {
+                    "vehicleId": 6,
+                    "make": "Audi",
+                    "model": "R8",
+                    "year": "2021",
+                    "configuration": "Coupe V10 Premium",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": false,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "1276"
+                }
+            }
+        }
+    ]
+}
