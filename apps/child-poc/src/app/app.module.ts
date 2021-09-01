@@ -1,9 +1,11 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shared';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,9 +19,11 @@ import { AppComponent } from './app.component';
                 path: 'vehicle-details',
                 loadChildren: () => import('@child-poc/vehicle-details').then((module) => module.VehicleDetailsModule)
             }
-        ])
+        ]),
+        SharedModule,
+        TranslateModule.forRoot()
     ],
-    providers: [],
+    providers: [VehiclesService, InventoryService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,20 +1,18 @@
-import { IDetails } from '../models';
-
 export interface IPurchaseInformation {
     condition: ICondition;
     MSRP: IPriceByCondition;
     cashDiscount: number; // percentage
     purchasePrice?: number;
-    vehicle: IDetails;
+    vehicleId: number;
 }
 
 export enum ICondition {
-    'New',
-    'Excellent',
-    'Very Good',
-    'Used',
-    'Poor',
-    'Not Running'
+    'new' = 'New',
+    'excellent' = 'Excellent',
+    'veryGood' = 'Very Good',
+    'used' = 'Used',
+    'poor' = 'Poor',
+    'notRunning' = 'Not Running'
 }
 
 export interface IPriceByCondition {

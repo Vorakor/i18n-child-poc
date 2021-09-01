@@ -1,9 +1,10 @@
 import { Location } from '@angular/common';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VehiclesService, IDetails } from '@child-poc/shared';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'vehicle-details-details',
@@ -12,12 +13,17 @@ import { Observable } from 'rxjs';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DetailsComponent implements OnInit {
-    public vehicle$: Observable<IDetails> = new Observable<IDetails>();
-    constructor(private vService: VehiclesService) {}
+    public vehicle$: Observable<IDetails> = this.vService.selectedVehicle$.pipe(filter((v) => v !== undefined || v !== null));
+    constructor(private router: Router, private vService: VehiclesService, private translation: TranslateService) {}
 
     ngOnInit(): void {
-        // this.vehicle$ = this.vService.getVehicle(Number(this.route.snapshot.paramMap.get('id')));
-        // this.vehicle$.subscribe((car) => console.log(car));
+        this.translation.setTranslation('en', { DETAILS: { HOME: 'Vehicle Details' } });
+        this.vService.selectedVehicle$.subscribe((v) => {
+            console.log(v);
+            if (v == null || v == undefined || Object.keys(v).length == 0) {
+                this.router.navigate(['inventory']);
+            }
+        });
     }
 
     keyToString(key: string): string {

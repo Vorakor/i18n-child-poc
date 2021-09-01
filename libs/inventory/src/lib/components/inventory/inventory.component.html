@@ -1,1 +1,3 @@
-<p>inventory works!</p>
+<div translate>INVENTORY.WELCOME_MESSAGE</div>
+<vehicles-vehicles [newVehicles]="true" [vehicles]="newInv$ | async"></vehicles-vehicles>
+<vehicles-vehicles [vehicles]="usedInv$ | async"></vehicles-vehicles>

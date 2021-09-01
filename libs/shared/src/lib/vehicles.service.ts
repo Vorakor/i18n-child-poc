@@ -19,6 +19,7 @@ export class VehiclesService {
     }
 
     setVehicle(id: number): void {
+        console.log('Vehicle ID: ' + id);
         this.vehicles$
             .pipe(
                 mergeMap((vehicles) => {
@@ -27,6 +28,7 @@ export class VehiclesService {
                 first()
             )
             .subscribe((vehicle: IDetails) => {
+                console.log(vehicle);
                 this._selectedVehicle.next(vehicle);
             });
     }

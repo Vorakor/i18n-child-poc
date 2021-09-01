@@ -1,0 +1,326 @@
+{
+    "inventory": [
+        {
+            "dealershipId": 1,
+            "newVehicles": [
+                {
+                    "vehicleId": 3,
+                    "make": "Volkswagen",
+                    "model": "Tiguan",
+                    "year": "2021",
+                    "configuration": "SE",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": false,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "0"
+                }
+            ],
+            "usedVehicles": [
+                {
+                    "vehicleId": 8,
+                    "make": "Honda",
+                    "model": "Civic",
+                    "year": "2011",
+                    "configuration": "LX Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "68000"
+                },
+                {
+                    "vehicleId": 10,
+                    "make": "Acura",
+                    "model": "MDX",
+                    "year": "2020",
+                    "configuration": "Technology SH-AWD",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "6223"
+                },
+                {
+                    "vehicleId": 11,
+                    "make": "Acura",
+                    "model": "TLX",
+                    "year": "2015",
+                    "configuration": "LX Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "76000"
+                }
+            ],
+            "sales": [
+                {
+                    "vehicle": {
+                        "vehicleId": 3,
+                        "make": "Volkswagen",
+                        "model": "Tiguan",
+                        "year": "2021",
+                        "configuration": "SE",
+                        "engineType": "automatic",
+                        "wheelSize": "245/40R18 97Y",
+                        "awd": false,
+                        "fuelType": "gasoline",
+                        "mileage": "21ci/30h/24co",
+                        "odometer": "0"
+                    },
+                    "purchaseInfo": {
+                        "condition": "new",
+                        "MSRP": {
+                            "new": 50000,
+                            "excellent": 32000,
+                            "veryGood": 25000,
+                            "used": 20000,
+                            "poor": 15000,
+                            "notRunning": 1000
+                        },
+                        "cashDiscount": 10,
+                        "purchasePrice": 50000,
+                        "vehicleId": 3
+                    }
+                }
+            ],
+            "tradeins": [],
+            "purchases": []
+        },
+        {
+            "dealershipId": 2,
+            "newVehicles": [
+                {
+                    "vehicleId": 5,
+                    "make": "Audi",
+                    "model": "S4",
+                    "year": "2021",
+                    "configuration": "3.0T Quattro Prestige",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "0"
+                }
+            ],
+            "usedVehicles": [
+                {
+                    "vehicleId": 4,
+                    "make": "Audi",
+                    "model": "A4",
+                    "year": "2008",
+                    "configuration": "2.0T Quattro S-Line",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "118040"
+                },
+                {
+                    "vehicleId": 9,
+                    "make": "Honda",
+                    "model": "Ridgeline",
+                    "year": "2020",
+                    "configuration": "Sport Pickup 4D 5ft",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "2126"
+                },
+                {
+                    "vehicleId": 12,
+                    "make": "Acura",
+                    "model": "RLX",
+                    "year": "2018",
+                    "configuration": "Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "51187"
+                }
+            ],
+            "sales": [],
+            "tradeins": [
+                {
+                    "vehicle": {
+                        "vehicleId": 4,
+                        "make": "Audi",
+                        "model": "A4",
+                        "year": "2008",
+                        "configuration": "2.0T Quattro S-Line",
+                        "engineType": "automatic",
+                        "wheelSize": "245/40R18 97Y",
+                        "awd": true,
+                        "fuelType": "gasoline",
+                        "mileage": "21ci/30h/24co",
+                        "odometer": "118040"
+                    },
+                    "condition": "used"
+                }
+            ],
+            "purchases": [
+                {
+                    "vehicle": {
+                        "vehicleId": 12,
+                        "make": "Acura",
+                        "model": "RLX",
+                        "year": "2018",
+                        "configuration": "Sedan 4D",
+                        "engineType": "automatic",
+                        "wheelSize": "235/70R16 104T",
+                        "awd": true,
+                        "fuelType": "gasoline",
+                        "mileage": "15ci/20h/17co",
+                        "odometer": "51187"
+                    },
+                    "purchaseInfo": {
+                        "MSRP": {
+                            "new": 55000,
+                            "excellent": 32000,
+                            "veryGood": 28000,
+                            "used": 25000,
+                            "poor": 15000,
+                            "notRunning": 5000
+                        },
+                        "cashDiscount": 10,
+                        "purchasePrice": 25000,
+                        "vehicleId": 12
+                    },
+                    "condition": "Excellent"
+                }
+            ]
+        },
+        {
+            "dealershipId": 3,
+            "newVehicles": [
+                {
+                    "vehicleId": 6,
+                    "make": "Audi",
+                    "model": "R8",
+                    "year": "2021",
+                    "configuration": "Coupe V10 Premium",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": false,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "1276"
+                }
+            ],
+            "usedVehicles": [
+                {
+                    "vehicleId": 1,
+                    "make": "Volkswagen",
+                    "model": "Jetta",
+                    "year": "2016",
+                    "configuration": "2.0L Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "85000"
+                },
+                {
+                    "vehicleId": 2,
+                    "make": "Volkswagen",
+                    "model": "Passat",
+                    "year": "2020",
+                    "configuration": "S Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "20291"
+                },
+                {
+                    "vehicleId": 7,
+                    "make": "Honda",
+                    "model": "Pilot",
+                    "year": "2007",
+                    "configuration": "4WD 3.5L FI SOHC 212 CID",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "159040"
+                }
+            ],
+            "sales": [
+                {
+                    "vehicle": {
+                        "vehicleId": 6,
+                        "make": "Audi",
+                        "model": "R8",
+                        "year": "2021",
+                        "configuration": "Coupe V10 Premium",
+                        "engineType": "automatic",
+                        "wheelSize": "245/40R18 97Y",
+                        "awd": false,
+                        "fuelType": "gasoline",
+                        "mileage": "21ci/30h/24co",
+                        "odometer": "1276"
+                    },
+                    "purchaseInfo": {
+                        "condition": "new",
+                        "MSRP": {
+                            "new": 140000,
+                            "excellent": 120000,
+                            "veryGood": 85000,
+                            "used": 70000,
+                            "poor": 60000,
+                            "notRunning": 15000
+                        },
+                        "cashDiscount": 10,
+                        "purchasePrice": 132000,
+                        "vehicleId": 6
+                    }
+                },
+                {
+                    "vehicle": {
+                        "vehicleId": 7,
+                        "make": "Honda",
+                        "model": "Pilot",
+                        "year": "2007",
+                        "configuration": "4WD 3.5L FI SOHC 212 CID",
+                        "engineType": "automatic",
+                        "wheelSize": "235/70R16 104T",
+                        "awd": true,
+                        "fuelType": "gasoline",
+                        "mileage": "15ci/20h/17co",
+                        "odometer": "159040"
+                    },
+                    "purchaseInfo": {
+                        "condition": "veryGood",
+                        "MSRP": {
+                            "new": 55000,
+                            "excellent": 32000,
+                            "veryGood": 28000,
+                            "used": 25000,
+                            "poor": 15000,
+                            "notRunning": 5000
+                        },
+                        "cashDiscount": 10,
+                        "purchasePrice": 15000,
+                        "vehicleId": 7
+                    }
+                }
+            ],
+            "tradeins": [],
+            "purchases": []
+        }
+    ]
+}

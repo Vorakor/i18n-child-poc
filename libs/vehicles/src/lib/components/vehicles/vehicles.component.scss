@@ -1,3 +1,34 @@
 :host {
-  display: block;
+    display: block;
+    margin-top: 15px;
+}
+
+.vcard-container {
+    margin: 10px;
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: 30% 30% 30%;
+    // grid-auto-flow: row dense;
+    // grid-template-rows: auto;
+    place-items: center;
+    place-content: center;
+}
+
+.vcard {
+    grid-column: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+.vitem {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.vkey,
+.vvalue {
+    flex: 1 1 50%;
+    align-self: flex-start;
 }
