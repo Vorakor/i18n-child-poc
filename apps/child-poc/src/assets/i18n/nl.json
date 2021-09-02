@@ -9,22 +9,6 @@
         "VEHICLE_MAKE": "Fabrikant",
         "VEHICLE_MODEL": "Model",
         "VEHICLE_YEAR": "Jaar",
-        "VEHICLE_ENGINE_TYPE": "Transmissietype",
-        "VEHICLE_WHEEL_SIZE": "Wielgrootte",
-        "VEHICLE_ALL_WHEEL_DRIVE": "Vierwielaandrijving",
-        "VEHICLE_FUEL_TYPE": "Brandstoftype",
-        "VEHICLE_MILEAGE": "Kilometerstand",
-        "VEHICLE_ODOMETER": "Kilometerteller",
-        "VEHICLE_GO_TO_DETAILS": "Ga naar details:",
-        "TRANSMISSION_TYPE_AUTO": "Automatisch",
-        "TRANSMISSION_TYPE_MANU": "Handmatig",
-        "AWD_TRUE": "Waar",
-        "AWD_FALSE": "Niet waar",
-        "FUEL_TYPE_GAS": "Benzine",
-        "FUEL_TYPE_NAT": "Natuurlijk gas",
-        "FUEL_TYPE_DIE": "Diesel",
-        "MILEAGE_CITY": "Stad",
-        "MILEAGE_HIGH": "Snelweg",
-        "MILEAGE_COMB": "Gecombineerd"
+        "VEHICLE_GO_TO_DETAILS": "Ga naar details:"
     }
 }

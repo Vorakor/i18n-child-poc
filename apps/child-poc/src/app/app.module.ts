@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shared';
 
@@ -23,7 +23,7 @@ import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shar
         SharedModule,
         TranslateModule.forRoot()
     ],
-    providers: [VehiclesService, InventoryService],
+    providers: [VehiclesService, InventoryService, TranslatePipe],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
