@@ -2,7 +2,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 
 import * as data from './data/inventory.json';
-import { ISales, ITradeIn, IInventory, ICondition, IPurchases } from './models';
+import { ISales, ITradeIn, IInventory, ICondition, IPurchases, IDetails } from './models';
 
 @Injectable({
     providedIn: 'root'
@@ -64,6 +64,12 @@ export class InventoryService implements OnDestroy {
             })
             .filter((inv: IInventory) => inv.dealershipId == dealershipId)[0];
         this._inventory.next(dealerInventory);
+    }
+
+    getVehicleInventory(dealershipId: number): IDetails[] {
+        const selectedInv = data.inventory.find((inv) => inv.dealershipId == dealershipId);
+        const dealerInventory: IDetails[] = [...selectedInv.newVehicles, ...selectedInv.usedVehicles];
+        return dealerInventory;
     }
 
     _convertCondition(condition: string): ICondition {

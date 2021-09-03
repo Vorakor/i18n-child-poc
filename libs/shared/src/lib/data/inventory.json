@@ -94,22 +94,34 @@
         },
         {
             "dealershipId": 2,
-            "newVehicles": [
+            "newVehicles": [],
+            "usedVehicles": [
                 {
-                    "vehicleId": 5,
-                    "make": "Audi",
-                    "model": "S4",
-                    "year": "2021",
-                    "configuration": "3.0T Quattro Prestige",
+                    "vehicleId": 1,
+                    "make": "Volkswagen",
+                    "model": "Jetta",
+                    "year": "2016",
+                    "configuration": "2.0L Sedan 4D",
                     "engineType": "automatic",
                     "wheelSize": "245/40R18 97Y",
                     "awd": true,
                     "fuelType": "gasoline",
                     "mileage": "21ci/30h/24co",
-                    "odometer": "0"
-                }
-            ],
-            "usedVehicles": [
+                    "odometer": "85000"
+                },
+                {
+                    "vehicleId": 2,
+                    "make": "Volkswagen",
+                    "model": "Passat",
+                    "year": "2020",
+                    "configuration": "S Sedan 4D",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "20291"
+                },
                 {
                     "vehicleId": 4,
                     "make": "Audi",
@@ -122,6 +134,19 @@
                     "fuelType": "gasoline",
                     "mileage": "21ci/30h/24co",
                     "odometer": "118040"
+                },
+                {
+                    "vehicleId": 7,
+                    "make": "Honda",
+                    "model": "Pilot",
+                    "year": "2007",
+                    "configuration": "4WD 3.5L FI SOHC 212 CID",
+                    "engineType": "automatic",
+                    "wheelSize": "235/70R16 104T",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "15ci/20h/17co",
+                    "odometer": "159040"
                 },
                 {
                     "vehicleId": 9,
@@ -150,7 +175,37 @@
                     "odometer": "51187"
                 }
             ],
-            "sales": [],
+            "sales": [
+                {
+                    "vehicle": {
+                        "vehicleId": 7,
+                        "make": "Honda",
+                        "model": "Pilot",
+                        "year": "2007",
+                        "configuration": "4WD 3.5L FI SOHC 212 CID",
+                        "engineType": "automatic",
+                        "wheelSize": "235/70R16 104T",
+                        "awd": true,
+                        "fuelType": "gasoline",
+                        "mileage": "15ci/20h/17co",
+                        "odometer": "159040"
+                    },
+                    "purchaseInfo": {
+                        "condition": "veryGood",
+                        "MSRP": {
+                            "new": 55000,
+                            "excellent": 32000,
+                            "veryGood": 28000,
+                            "used": 25000,
+                            "poor": 15000,
+                            "notRunning": 5000
+                        },
+                        "cashDiscount": 10,
+                        "purchasePrice": 15000,
+                        "vehicleId": 7
+                    }
+                }
+            ],
             "tradeins": [
                 {
                     "vehicle": {
@@ -205,6 +260,19 @@
             "dealershipId": 3,
             "newVehicles": [
                 {
+                    "vehicleId": 5,
+                    "make": "Audi",
+                    "model": "S4",
+                    "year": "2021",
+                    "configuration": "3.0T Quattro Prestige",
+                    "engineType": "automatic",
+                    "wheelSize": "245/40R18 97Y",
+                    "awd": true,
+                    "fuelType": "gasoline",
+                    "mileage": "21ci/30h/24co",
+                    "odometer": "0"
+                },
+                {
                     "vehicleId": 6,
                     "make": "Audi",
                     "model": "R8",
@@ -218,47 +286,7 @@
                     "odometer": "1276"
                 }
             ],
-            "usedVehicles": [
-                {
-                    "vehicleId": 1,
-                    "make": "Volkswagen",
-                    "model": "Jetta",
-                    "year": "2016",
-                    "configuration": "2.0L Sedan 4D",
-                    "engineType": "automatic",
-                    "wheelSize": "245/40R18 97Y",
-                    "awd": true,
-                    "fuelType": "gasoline",
-                    "mileage": "21ci/30h/24co",
-                    "odometer": "85000"
-                },
-                {
-                    "vehicleId": 2,
-                    "make": "Volkswagen",
-                    "model": "Passat",
-                    "year": "2020",
-                    "configuration": "S Sedan 4D",
-                    "engineType": "automatic",
-                    "wheelSize": "245/40R18 97Y",
-                    "awd": true,
-                    "fuelType": "gasoline",
-                    "mileage": "21ci/30h/24co",
-                    "odometer": "20291"
-                },
-                {
-                    "vehicleId": 7,
-                    "make": "Honda",
-                    "model": "Pilot",
-                    "year": "2007",
-                    "configuration": "4WD 3.5L FI SOHC 212 CID",
-                    "engineType": "automatic",
-                    "wheelSize": "235/70R16 104T",
-                    "awd": true,
-                    "fuelType": "gasoline",
-                    "mileage": "15ci/20h/17co",
-                    "odometer": "159040"
-                }
-            ],
+            "usedVehicles": [],
             "sales": [
                 {
                     "vehicle": {
@@ -287,35 +315,6 @@
                         "cashDiscount": 10,
                         "purchasePrice": 132000,
                         "vehicleId": 6
-                    }
-                },
-                {
-                    "vehicle": {
-                        "vehicleId": 7,
-                        "make": "Honda",
-                        "model": "Pilot",
-                        "year": "2007",
-                        "configuration": "4WD 3.5L FI SOHC 212 CID",
-                        "engineType": "automatic",
-                        "wheelSize": "235/70R16 104T",
-                        "awd": true,
-                        "fuelType": "gasoline",
-                        "mileage": "15ci/20h/17co",
-                        "odometer": "159040"
-                    },
-                    "purchaseInfo": {
-                        "condition": "veryGood",
-                        "MSRP": {
-                            "new": 55000,
-                            "excellent": 32000,
-                            "veryGood": 28000,
-                            "used": 25000,
-                            "poor": 15000,
-                            "notRunning": 5000
-                        },
-                        "cashDiscount": 10,
-                        "purchasePrice": 15000,
-                        "vehicleId": 7
                     }
                 }
             ],
