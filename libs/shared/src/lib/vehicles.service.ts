@@ -11,11 +11,12 @@ import { first, mergeMap } from 'rxjs/operators';
 export class VehiclesService {
     private _selectedVehicle: BehaviorSubject<IDetails> = new BehaviorSubject<IDetails>({} as IDetails);
     public selectedVehicle$: Observable<IDetails> = this._selectedVehicle.asObservable();
-    public vehicles$: Observable<IDetails[]> = this.loadVehicles();
+    private _vehicles: BehaviorSubject<IDetails[]> = new BehaviorSubject<IDetails[]>(null);
+    public vehicles$: Observable<IDetails[]> = this._vehicles.asObservable();
     constructor(private http: HttpClient) {}
 
-    loadVehicles(): Observable<IDetails[]> {
-        return of(vehicles.vehicles);
+    loadVehicles(): void {
+        this._vehicles.next(vehicles.vehicles);
     }
 
     setVehicle(id: number): void {
