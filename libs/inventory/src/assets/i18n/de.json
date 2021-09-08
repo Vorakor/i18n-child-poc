@@ -1,0 +1,14 @@
+{
+    "INVENTORY": {
+        "WELCOME_MESSAGE": "Vielen Dank für Ihren Besuch! Nachfolgend finden Sie alle unsere aktuell verfügbaren Fahrzeuge.",
+        "NEW_VEHICLES_LISTING": "Alle neuen 2022 Fahrzeuge jetzt auf Lager!",
+        "USED_VEHICLES_LISTING": "Gebrauchte und gut erhaltene Fahrzeuge auf Lager:"
+    },
+    "VEHICLES": {
+        "VEHICLE_ID": "Inventar nummer",
+        "VEHICLE_MAKE": "Hersteller",
+        "VEHICLE_MODEL": "Modell",
+        "VEHICLE_YEAR": "Jahr",
+        "VEHICLE_GO_TO_DETAILS": "Gehe zu Einzelheiten:"
+    }
+}

@@ -10,7 +10,7 @@ import { filter, map, switchMap } from 'rxjs/operators';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InventoryComponent implements OnInit {
-    @Input() dealershipId: number = 1;
+    @Input() dealershipId: number = 0;
     public localInventory$: Observable<IInventory> = this.inventory.inventory$;
     public newInv$ = this.localInventory$.pipe(
         filter((inv) => inv !== null || inv !== undefined),
@@ -33,5 +33,9 @@ export class InventoryComponent implements OnInit {
         this.vService.loadVehicles();
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        if (this.dealershipId == 0) {
+            this.inventory.setDealership(1);
+        }
+    }
 }

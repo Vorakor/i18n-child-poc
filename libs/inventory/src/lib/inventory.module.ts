@@ -4,12 +4,8 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { VehiclesModule } from '@child-poc/vehicles';
 import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { InventoryComponent } from './components/inventory/inventory.component';
-
-export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import { I18nInventoryLoader } from './i18n-inventory-loader';
 
 @NgModule({
     imports: [
@@ -22,7 +18,7 @@ export function HttpLoaderFactory(http: HttpClient) {
             defaultLanguage: 'en',
             loader: {
                 provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
+                useClass: I18nInventoryLoader,
                 deps: [HttpClient]
             }
         })

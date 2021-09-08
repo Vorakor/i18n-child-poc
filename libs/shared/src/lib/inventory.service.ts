@@ -68,8 +68,12 @@ export class InventoryService implements OnDestroy {
 
     getVehicleInventory(dealershipId: number): IDetails[] {
         const selectedInv = data.inventory.find((inv) => inv.dealershipId == dealershipId);
-        const dealerInventory: IDetails[] = [...selectedInv.newVehicles, ...selectedInv.usedVehicles];
-        return dealerInventory;
+        if (!selectedInv) {
+            return [];
+        } else {
+            const dealerInventory: IDetails[] = [...selectedInv.newVehicles, ...selectedInv.usedVehicles];
+            return dealerInventory;
+        }
     }
 
     _convertCondition(condition: string): ICondition {

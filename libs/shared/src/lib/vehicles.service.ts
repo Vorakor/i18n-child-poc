@@ -11,7 +11,7 @@ import { first, mergeMap } from 'rxjs/operators';
 export class VehiclesService {
     private _selectedVehicle: BehaviorSubject<IDetails> = new BehaviorSubject<IDetails>({} as IDetails);
     public selectedVehicle$: Observable<IDetails> = this._selectedVehicle.asObservable();
-    private _vehicles: BehaviorSubject<IDetails[]> = new BehaviorSubject<IDetails[]>(null);
+    private _vehicles: BehaviorSubject<IDetails[]> = new BehaviorSubject<IDetails[]>([]);
     public vehicles$: Observable<IDetails[]> = this._vehicles.asObservable();
     constructor(private http: HttpClient) {}
 
