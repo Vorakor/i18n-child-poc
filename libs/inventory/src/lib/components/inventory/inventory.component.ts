@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
-import { InventoryService, IInventory, IDetails } from '@child-poc/shared';
+import { InventoryService, IInventory, IDetails, VehiclesService } from '@child-poc/shared';
 import { Observable } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
 
@@ -28,8 +28,9 @@ export class InventoryComponent implements OnInit {
             return inventory.usedVehicles;
         })
     );
-    constructor(public inventory: InventoryService) {
-        this.inventory.setDealership(1);
+    constructor(public inventory: InventoryService, private vService: VehiclesService) {
+        // this.inventory.setDealership(1);
+        this.vService.loadVehicles();
     }
 
     ngOnInit(): void {}
