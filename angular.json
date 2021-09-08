@@ -22,7 +22,7 @@
                             "apps/child-poc/src/assets",
                             {
                                 "glob": "**/*",
-                                "input": "libs/inventory/src/assets",
+                                "input": "libs/inventory/assets",
                                 "output": "assets/inventory"
                             }
                         ],
