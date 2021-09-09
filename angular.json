@@ -22,13 +22,13 @@
                             "apps/child-poc/src/assets",
                             {
                                 "glob": "**/*",
-                                "input": "libs/vehicle-details/assets",
-                                "output": "assets/vehicle-details"
+                                "input": "libs/inventory/assets",
+                                "output": "assets/inventory"
                             },
                             {
                                 "glob": "**/*",
-                                "input": "libs/inventory/assets",
-                                "output": "assets/inventory"
+                                "input": "libs/vehicle-details/assets",
+                                "output": "assets/vehicle-details"
                             }
                         ],
                         "styles": ["apps/child-poc/src/styles.scss"],

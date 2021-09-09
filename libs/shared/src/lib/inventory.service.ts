@@ -1,5 +1,6 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 import * as data from './data/inventory.json';
 import { ISales, ITradeIn, IInventory, ICondition, IPurchases, IDetails } from './models';
@@ -12,13 +13,17 @@ export class InventoryService implements OnDestroy {
     public inventory$: Observable<IInventory> = this._inventory.asObservable();
     private _selectedDealership: BehaviorSubject<number> = new BehaviorSubject<number>(0);
     public selectedDealership$: Observable<number> = this._selectedDealership.asObservable();
-    private _subs: Subscription[] = [];
+    public subs: Subscription[] = [];
 
     constructor() {
-        const selDel = this.selectedDealership$.subscribe((dealershipId: number) => {
-            this.loadInventory(dealershipId);
+        const selected = this.selectedDealership$.pipe(distinctUntilChanged()).subscribe((dealershipId) => {
+            if (dealershipId == 0 || dealershipId == null || dealershipId == undefined) {
+                this.loadInventory(1);
+            } else {
+                this.loadInventory(dealershipId);
+            }
         });
-        this._subs.push(selDel);
+        this.subs.push(selected);
     }
 
     setDealership(dealershipId: number) {
@@ -26,6 +31,7 @@ export class InventoryService implements OnDestroy {
     }
 
     loadInventory(dealershipId: number) {
+        this._selectedDealership.next(dealershipId);
         const dealerInventory: IInventory = data.inventory
             .map((inv: any) => {
                 if (inv.sales.length > 0) {
@@ -94,6 +100,6 @@ export class InventoryService implements OnDestroy {
     }
 
     ngOnDestroy() {
-        this._subs.forEach((subscription) => subscription.unsubscribe());
+        this.subs.forEach((subscription) => subscription.unsubscribe());
     }
 }
