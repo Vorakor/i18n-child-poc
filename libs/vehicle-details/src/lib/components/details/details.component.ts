@@ -27,11 +27,11 @@ export class DetailsComponent implements OnInit {
         }
         // this.detailsService.setEnglish();
         // this.detailsService.getTranslations(this.translation.currentLang).subscribe((translations) => console.log(translations));
-        // this.vService.selectedVehicle$.subscribe((v) => {
-        //     if (v == null || v == undefined || Object.keys(v).length == 0) {
-        //         this.router.navigate(['inventory']);
-        //     }
-        // });
+        this.vService.selectedVehicle$.subscribe((v) => {
+            if (v == null || v == undefined || Object.keys(v).length == 0) {
+                this.router.navigate(['inventory']);
+            }
+        });
     }
 
     keyToString(key: string): string {
