@@ -7,7 +7,13 @@ import { Subscription } from 'rxjs';
 })
 export class DetailsService implements OnDestroy {
     private subs: Subscription[] = [];
-    constructor(private translation: TranslateService) {
+    constructor(private translation: TranslateService) {}
+
+    getTranslations(lang: string) {
+        return this.translation.getTranslation(lang);
+    }
+
+    setTest1(): void {
         const langChange = this.translation.onLangChange.subscribe((event: LangChangeEvent) => {
             this._runSwitch(event.lang);
         });
@@ -43,7 +49,7 @@ export class DetailsService implements OnDestroy {
 
     setGerman(): void {
         this.translation.setTranslation('de', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Fahrzeugangaben' },
             VEHICLES: {
                 VEHICLE_ID: 'Inventar nummer',
                 VEHICLE_MAKE: 'Hersteller',
@@ -101,7 +107,7 @@ export class DetailsService implements OnDestroy {
 
     setSpanish(): void {
         this.translation.setTranslation('es', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Detalles del vehículo' },
             VEHICLES: {
                 VEHICLE_ID: 'Numero de inventario',
                 VEHICLE_MAKE: 'Fabricante',
@@ -130,7 +136,7 @@ export class DetailsService implements OnDestroy {
 
     setFrench(): void {
         this.translation.setTranslation('fr', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Les détails du véhicule' },
             VEHICLES: {
                 VEHICLE_ID: "Numéro d'inventaire",
                 VEHICLE_MAKE: 'Fabricant',
@@ -159,7 +165,7 @@ export class DetailsService implements OnDestroy {
 
     setItalian(): void {
         this.translation.setTranslation('it', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Dettagli del veicolo' },
             VEHICLES: {
                 VEHICLE_ID: 'Numero di inventario',
                 VEHICLE_MAKE: 'Produttore',
@@ -188,7 +194,7 @@ export class DetailsService implements OnDestroy {
 
     setDutch(): void {
         this.translation.setTranslation('nl', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Voertuig details' },
             VEHICLES: {
                 VEHICLE_ID: 'Inventaris nummer',
                 VEHICLE_MAKE: 'Fabrikant',
@@ -217,7 +223,7 @@ export class DetailsService implements OnDestroy {
 
     setPortuguese(): void {
         this.translation.setTranslation('pt', {
-            DETAILS: { HOME: 'Vehicle Details' },
+            DETAILS: { HOME: 'Detalhes do veículo' },
             VEHICLES: {
                 VEHICLE_ID: 'Número de inventário',
                 VEHICLE_MAKE: 'Fabricante',

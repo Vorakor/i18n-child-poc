@@ -3,9 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
-import { HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shared';
+
+export function HttpLoaderFactory(http: HttpClient) {
+    return new MultiTranslateHttpLoader(http, [
+        { prefix: './assets/i18n/', suffix: '.json' },
+        { prefix: './assets/inventory/i18n/', suffix: '.json' },
+        { prefix: './assets/vehicle-details/i18n/', suffix: '.json' }
+    ]);
+}
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,11 +26,19 @@ import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shar
             { path: 'inventory', pathMatch: 'full', loadChildren: () => import('@child-poc/inventory').then((module) => module.InventoryModule) },
             {
                 path: 'vehicle-details',
+                pathMatch: 'full',
                 loadChildren: () => import('@child-poc/vehicle-details').then((module) => module.VehicleDetailsModule)
             }
         ]),
         SharedModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot({
+            defaultLanguage: 'en',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
     ],
     providers: [VehiclesService, InventoryService, TranslatePipe],
     bootstrap: [AppComponent]

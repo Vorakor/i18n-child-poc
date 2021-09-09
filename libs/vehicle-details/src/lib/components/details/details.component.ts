@@ -22,12 +22,16 @@ export class DetailsComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this.detailsService.setEnglish();
-        this.vService.selectedVehicle$.subscribe((v) => {
-            if (v == null || v == undefined || Object.keys(v).length == 0) {
-                this.router.navigate(['inventory']);
-            }
-        });
+        if (this.translation.currentLang == undefined) {
+            this.translation.use('en');
+        }
+        // this.detailsService.setEnglish();
+        // this.detailsService.getTranslations(this.translation.currentLang).subscribe((translations) => console.log(translations));
+        // this.vService.selectedVehicle$.subscribe((v) => {
+        //     if (v == null || v == undefined || Object.keys(v).length == 0) {
+        //         this.router.navigate(['inventory']);
+        //     }
+        // });
     }
 
     keyToString(key: string): string {
