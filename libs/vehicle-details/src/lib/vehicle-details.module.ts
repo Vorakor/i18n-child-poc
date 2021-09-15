@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DetailsComponent } from './components/details/details.component';
 import { DetailsService } from './details.service';
@@ -24,6 +24,6 @@ import { I18nVehicleDetailsLoader } from './i18n-vehicle-details-loader';
     ],
     declarations: [DetailsComponent],
     exports: [DetailsComponent],
-    providers: [DetailsService]
+    providers: [DetailsService, TranslatePipe]
 })
 export class VehicleDetailsModule {}

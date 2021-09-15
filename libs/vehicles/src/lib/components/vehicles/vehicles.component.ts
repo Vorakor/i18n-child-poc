@@ -25,11 +25,7 @@ export class VehiclesComponent implements OnChanges {
     goToDetails(event: any, vehicle: IDetails) {
         event.preventDefault();
         this.vService.setVehicle(vehicle.vehicleId);
-        this.trans.setTranslation(
-            this.trans.currentLang ? this.trans.currentLang : this.trans.defaultLang,
-            this.detService.getTranslations(this.trans.currentLang ? this.trans.currentLang : this.trans.defaultLang),
-            true
-        );
+        // this.trans.setTranslation(this.trans.currentLang ? this.trans.currentLang : this.trans.defaultLang, this.detService.translations$, true);
         this.router.navigate(['vehicle-details']);
     }
 }

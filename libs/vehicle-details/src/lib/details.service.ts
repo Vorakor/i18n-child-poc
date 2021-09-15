@@ -1,16 +1,26 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, OnDestroy } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class DetailsService implements OnDestroy {
     private subs: Subscription[] = [];
-    constructor(private translation: TranslateService) {}
+    // public translations$: Observable<any> = this.translation.getTranslation(
+    //     this.translation.currentLang ? this.translation.currentLang : this.translation.defaultLang
+    // );
+    constructor(private http: HttpClient, private translation: TranslateService) {}
 
-    getTranslations(lang: string) {
-        return this.translation.getTranslation(lang);
+    lazyLoadTranslations() {
+        const currentLanguage = this.translation.currentLang ? this.translation.currentLang : this.translation.defaultLang;
+        this.translation.setTranslation(currentLanguage, this._getTranslationsFromFile(currentLanguage));
+    }
+
+    _getTranslationsFromFile(lang: string): Observable<any> {
+        const translationPath = './assets/vehicle-details/i18n/';
+        return this.http.get(`${translationPath}${lang}.json`);
     }
 
     setTest1(): void {
