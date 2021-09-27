@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IDetails, VehiclesService } from '@child-poc/shared';
 import { DetailsService } from '@child-poc/vehicle-details';
 import { TranslateService } from '@ngx-translate/core';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
     selector: 'vehicles-vehicles',
@@ -25,6 +26,14 @@ export class VehiclesComponent implements OnChanges {
     goToDetails(event: any, vehicle: IDetails) {
         event.preventDefault();
         this.vService.setVehicle(vehicle.vehicleId);
+        // this.detService.lazyLoadTranslations();
+        // const detailsTranslation = this.trans
+        //     .getTranslation(this.trans.currentLang ? this.trans.currentLang : this.trans.defaultLang)
+        //     .pipe(distinctUntilChanged())
+        //     .subscribe((trans) => {
+        //         console.log(trans);
+        //     });
+        // this.detService.subs.push(detailsTranslation);
         // this.trans.setTranslation(this.trans.currentLang ? this.trans.currentLang : this.trans.defaultLang, this.detService.translations$, true);
         this.router.navigate(['vehicle-details']);
     }
