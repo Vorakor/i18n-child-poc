@@ -16,11 +16,11 @@
         "baseUrl": ".",
         "resolveJsonModule": true,
         "paths": {
-            "@child-poc/vehicles": ["libs/vehicles/src/index.ts"],
-            "@child-poc/inventory": ["libs/inventory/src/index.ts"],
-            "@child-poc/vehicle-details": ["libs/vehicle-details/src/index.ts"],
-            "@child-poc/vehicle-modal": ["libs/vehicle-modal/src/index.ts"],
-            "@child-poc/shared": ["libs/shared/src/index.ts"]
+            "@child-poc/vehicles": ["dist/libs/vehicles", "libs/vehicles/src/index.ts"],
+            "@child-poc/inventory": ["dist/libs/inventory", "libs/inventory/src/index.ts"],
+            "@child-poc/vehicle-details": ["dist/libs/vehicle-details", "libs/vehicle-details/src/index.ts"],
+            "@child-poc/vehicle-modal": ["dist/libs/vehicle-modal", "libs/vehicle-modal/src/index.ts"],
+            "@child-poc/shared": ["dist/libs/shared", "libs/shared/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

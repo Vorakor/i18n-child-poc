@@ -4,7 +4,7 @@ import { VehiclesService, IDetails } from '@child-poc/shared';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { DetailsService } from '../../details.service';
+// import { DetailsService } from '../../details.service';
 
 @Component({
     selector: 'vehicle-details-details',
@@ -17,9 +17,9 @@ export class DetailsComponent implements OnInit {
     constructor(
         private router: Router,
         private vService: VehiclesService,
-        private translation: TranslateService,
-        private detailsService: DetailsService
-    ) {}
+        private translation: TranslateService
+    ) // private detailsService: DetailsService
+    {}
 
     ngOnInit(): void {
         if (this.translation.currentLang == undefined) {

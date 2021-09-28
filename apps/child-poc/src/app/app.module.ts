@@ -5,15 +5,11 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MultiTranslateHttpLoader } from 'ngx-translate-multi-http-loader';
 import { SharedModule, VehiclesService, InventoryService } from '@child-poc/shared';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new MultiTranslateHttpLoader(http, [
-        { prefix: './assets/i18n/', suffix: '.json' },
-        { prefix: './assets/inventory/i18n/', suffix: '.json' },
-        { prefix: './assets/vehicle-details/i18n/', suffix: '.json' }
-    ]);
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({

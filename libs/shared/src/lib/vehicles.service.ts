@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IDetails } from './models';
 import * as vehicles from './data/vehicles.json';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { first, mergeMap } from 'rxjs/operators';
 
 @Injectable({
