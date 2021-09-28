@@ -5,4 +5,4 @@ export * from './lib/components/details/details.component';
 // export * from './lib/translation-models';
 
 import * as keys from './assets/i18n/en.json';
-export type TranslationKeys = keyof typeof keys;
+export const TranslationKeys = Object.keys(keys);
