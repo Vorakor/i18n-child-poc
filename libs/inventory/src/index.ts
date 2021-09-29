@@ -3,4 +3,4 @@ export * from './lib/components/inventory/inventory.component';
 // export * from './lib/i18n-inventory-loader';
 
 import * as keys from './assets/i18n/en.json';
-export const TranslationKeys = Object.keys(keys);
+export const TranslationKeys = Object.keys(keys).filter((key) => key !== 'default');
