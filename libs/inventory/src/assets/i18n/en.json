@@ -1,5 +1,3 @@
 {
-    "INVENTORY": {
-        "WELCOME_MESSAGE": "Thanks for visiting us!  Below are all of our currently available vehicles."
-    }
+    "INVENTORY_WELCOME_MESSAGE": "Thanks for visiting us!  Below are all of our currently available vehicles."
 }

@@ -1,13 +1,9 @@
 {
-    "INVENTORY": {
-        "NEW_VEHICLES_LISTING": "All new 2022 vehicles in stock now!",
-        "USED_VEHICLES_LISTING": "Used and good condition vehicles in stock:"
-    },
-    "VEHICLES": {
-        "VEHICLE_ID": "Inventory number",
-        "VEHICLE_MAKE": "Manufacturer",
-        "VEHICLE_MODEL": "Model",
-        "VEHICLE_YEAR": "Year",
-        "VEHICLE_GO_TO_DETAILS": "Go to details:"
-    }
+    "INVENTORY_NEW_VEHICLES_LISTING": "All new 2022 vehicles in stock now!",
+    "INVENTORY_USED_VEHICLES_LISTING": "Used and good condition vehicles in stock:",
+    "VEHICLES_VEHICLE_ID": "Inventory number",
+    "VEHICLES_VEHICLE_MAKE": "Manufacturer",
+    "VEHICLES_VEHICLE_MODEL": "Model",
+    "VEHICLES_VEHICLE_YEAR": "Year",
+    "VEHICLES_VEHICLE_GO_TO_DETAILS": "Go to details:"
 }

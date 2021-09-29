@@ -1,4 +1,4 @@
-<h3 translate>DETAILS.HOME</h3>
+<h3 translate>DETAILS_HOME</h3>
 <div *ngFor="let prop of vehicle$ | async | keyvalue">
     <div>{{ keyToString(prop.key) }}: {{ valueToString(prop.key, prop.value) }}</div>
 </div>

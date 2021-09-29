@@ -1,51 +1,51 @@
-<div *ngIf="newVehicles" translate>INVENTORY.NEW_VEHICLES_LISTING</div>
-<div *ngIf="!newVehicles" translate>INVENTORY.USED_VEHICLES_LISTING</div>
+<div *ngIf="newVehicles" translate>INVENTORY_NEW_VEHICLES_LISTING</div>
+<div *ngIf="!newVehicles" translate>INVENTORY_USED_VEHICLES_LISTING</div>
 <div class="vcard-container">
     <div class="vcard" *ngFor="let car of vehicles">
         <div class="vitem vid">
-            <div class="vkey" translate>VEHICLES.VEHICLE_ID</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_ID</div>
             <div class="vvalue">{{ car.vehicleId }}</div>
         </div>
         <div class="vitem vyear">
-            <div class="vkey" translate>VEHICLES.VEHICLE_YEAR</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_YEAR</div>
             <div class="vvalue">{{ car.year }}</div>
         </div>
         <div class="vitem vmake">
-            <div class="vkey" translate>VEHICLES.VEHICLE_MAKE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_MAKE</div>
             <div class="vvalue">{{ car.make }}</div>
         </div>
         <div class="vitem vmodel">
-            <div class="vkey" translate>VEHICLES.VEHICLE_MODEL</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_MODEL</div>
             <div class="vvalue">{{ car.model }} {{ car.configuration }}</div>
         </div>
         <div class="vitem vdetails">
-            <div class="vkey" translate>VEHICLES.VEHICLE_GO_TO_DETAILS</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_GO_TO_DETAILS</div>
             <div class="vvalue">
                 <a [routerLink]="" (click)="goToDetails($event, car)">{{ car.year }} {{ car.make }} {{ car.model }} {{ car.configuration }}</a>
             </div>
         </div>
         <!-- <div class="vitem venginetype">
-            <div class="vkey" translate>VEHICLES.VEHICLE_ENGINE_TYPE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_ENGINE_TYPE</div>
             <div class="vvalue" translate>{{ car.engineType }}</div>
         </div>
         <div class="vitem vwheelsize">
-            <div class="vkey" translate>VEHICLES.VEHICLE_WHEEL_SIZE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_WHEEL_SIZE</div>
             <div class="vvalue">{{ car.wheelSize }}</div>
         </div>
         <div class="vitem vawd">
-            <div class="vkey" translate>VEHICLES.VEHICLE_ALL_WHEEL_DRIVE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_ALL_WHEEL_DRIVE</div>
             <div class="vvalue">{{ car.awd ? 'True' : 'False' }}</div>
         </div>
         <div class="vitem vfueltype">
-            <div class="vkey" translate>VEHICLES.VEHICLE_FUEL_TYPE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_FUEL_TYPE</div>
             <div class="vvalue">{{ car.fuelType }}</div>
         </div>
         <div class="vitem vmileage">
-            <div class="vkey" translate>VEHICLES.VEHICLE_MILEAGE</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_MILEAGE</div>
             <div class="vvalue">{{ car.mileage }}</div>
         </div>
         <div class="vitem vodometer">
-            <div class="vkey" translate>VEHICLES.VEHICLE_ODOMETER</div>
+            <div class="vkey" translate>VEHICLES_VEHICLE_ODOMETER</div>
             <div class="vvalue">{{ car.odometer }}</div>
         </div> -->
     </div>
