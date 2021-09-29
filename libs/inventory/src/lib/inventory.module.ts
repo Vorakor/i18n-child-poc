@@ -13,15 +13,7 @@ import { InventoryComponent } from './components/inventory/inventory.component';
         HttpClientModule,
         VehiclesModule,
         RouterModule.forChild([{ path: '', pathMatch: 'full', component: InventoryComponent }]),
-        TranslateModule.forChild({
-            extend: true,
-            defaultLanguage: 'en'
-            // loader: {
-            //     provide: TranslateLoader,
-            //     useClass: I18nInventoryLoader,
-            //     deps: [HttpClient]
-            // }
-        })
+        TranslateModule
     ],
     declarations: [InventoryComponent],
     exports: [InventoryComponent],
