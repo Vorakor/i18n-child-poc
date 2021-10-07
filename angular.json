@@ -22,13 +22,18 @@
                             "apps/child-poc/src/assets",
                             {
                                 "glob": "**/*",
-                                "input": "libs/inventory/assets",
+                                "input": "libs/inventory/src/assets",
                                 "output": "assets/inventory"
                             },
                             {
                                 "glob": "**/*",
-                                "input": "libs/vehicle-details/assets",
+                                "input": "libs/vehicle-details/src/assets",
                                 "output": "assets/vehicle-details"
+                            },
+                            {
+                                "glob": "**/*",
+                                "input": "libs/vehicles/src/assets",
+                                "output": "assets/vehicles"
                             }
                         ],
                         "styles": ["apps/child-poc/src/styles.scss"],
@@ -135,7 +140,7 @@
             "prefix": "vehicles",
             "architect": {
                 "build": {
-                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "builder": "@nrwl/angular:package",
                     "options": {
                         "tsConfig": "libs/vehicles/tsconfig.lib.json",
                         "project": "libs/vehicles/ng-package.json"
@@ -169,7 +174,7 @@
             "prefix": "inventory",
             "architect": {
                 "build": {
-                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "builder": "@nrwl/angular:package",
                     "options": {
                         "tsConfig": "libs/inventory/tsconfig.lib.json",
                         "project": "libs/inventory/ng-package.json"
@@ -203,7 +208,7 @@
             "prefix": "details",
             "architect": {
                 "build": {
-                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "builder": "@nrwl/angular:package",
                     "options": {
                         "tsConfig": "libs/vehicle-details/tsconfig.lib.json",
                         "project": "libs/vehicle-details/ng-package.json"
@@ -237,7 +242,7 @@
             "prefix": "modal",
             "architect": {
                 "build": {
-                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "builder": "@nrwl/angular:package",
                     "options": {
                         "tsConfig": "libs/vehicle-modal/tsconfig.lib.json",
                         "project": "libs/vehicle-modal/ng-package.json"
@@ -271,7 +276,7 @@
             "prefix": "lib",
             "architect": {
                 "build": {
-                    "builder": "@nrwl/angular:ng-packagr-lite",
+                    "builder": "@nrwl/angular:package",
                     "options": {
                         "tsConfig": "libs/shared/tsconfig.lib.json",
                         "project": "libs/shared/ng-package.json"
