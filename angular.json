@@ -17,25 +17,7 @@
                         "polyfills": "apps/child-poc/src/polyfills.ts",
                         "tsConfig": "apps/child-poc/tsconfig.app.json",
                         "aot": true,
-                        "assets": [
-                            "apps/child-poc/src/favicon.ico",
-                            "apps/child-poc/src/assets",
-                            {
-                                "glob": "**/*",
-                                "input": "libs/inventory/src/assets",
-                                "output": "assets/inventory"
-                            },
-                            {
-                                "glob": "**/*",
-                                "input": "libs/vehicle-details/src/assets",
-                                "output": "assets/vehicle-details"
-                            },
-                            {
-                                "glob": "**/*",
-                                "input": "libs/vehicles/src/assets",
-                                "output": "assets/vehicles"
-                            }
-                        ],
+                        "assets": ["apps/child-poc/src/favicon.ico", "apps/child-poc/src/assets"],
                         "styles": ["apps/child-poc/src/styles.scss"],
                         "scripts": []
                     },
